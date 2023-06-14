@@ -3,7 +3,6 @@ package com.travel.controllers;
 import com.travel.bom.User;
 import com.travel.services.UserService;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.users.AbstractUser;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -22,5 +21,10 @@ public class UserController {
     @PostMapping("/register")
     public User register(@RequestBody User user) {
         return userService.register(user);
+    }
+
+    @PostMapping("/auth")
+    public User auth(@RequestBody User user) {
+        return userService.auth(user);
     }
 }
