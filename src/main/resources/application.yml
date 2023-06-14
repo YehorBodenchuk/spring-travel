@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: ${DB_URI:mongodb://admin:admin@127.0.0.1:27017/travel?authSource=admin}

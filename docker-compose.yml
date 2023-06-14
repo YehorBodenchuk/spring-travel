@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  mongo:
+    container_name: mongo_travel
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+      MONGO_INITDB_DATABASE: travel
+    ports:
+      - 27007:27007
+      - 27017:27017
