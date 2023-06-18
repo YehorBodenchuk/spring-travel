@@ -29,4 +29,8 @@ public class UserService {
 
         return resultUser;
     }
+
+    public User get(String userId) {
+        return userConnector.getById(userId);
+    }
 }

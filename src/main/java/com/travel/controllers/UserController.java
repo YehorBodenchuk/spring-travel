@@ -18,6 +18,11 @@ public class UserController {
         return "Hello, world!";
     }
 
+    @GetMapping("/{userId}")
+    public User getById(@PathVariable String userId) {
+        return userService.get(userId);
+    }
+
     @PostMapping("/register")
     public User register(@RequestBody User user) {
         return userService.register(user);

@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/tour")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class TourController {
 
     private final TourService tourService;

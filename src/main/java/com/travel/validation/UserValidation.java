@@ -24,5 +24,9 @@ public class UserValidation {
         if (userConnector.findByEmail(user.getEmail()) != null) {
             throw new UserBadRequestException("This email already registered!");
         }
+
+        if (!user.getEmail().contains("@")) {
+            throw new UserBadRequestException("This email are not valid!");
+        }
     }
 }
